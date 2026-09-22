@@ -50,7 +50,7 @@ function updateThemeLabel() {
   const dark = document.body.classList.contains('dark');
   document.getElementById('theme').setAttribute('aria-pressed', String(dark));
   document.getElementById('theme').setAttribute('aria-label', dark ? label('切换浅色模式', 'Switch to light mode') : label('切换深色模式', 'Switch to dark mode'));
-  document.querySelector('meta[name="theme-color"]').content = dark ? '#08090b' : '#fffae8';
+  document.querySelector('meta[name="theme-color"]').content = dark ? '#08090b' : '#f5f6fa';
 }
 
 function render() {
@@ -58,8 +58,8 @@ function render() {
   document.documentElement.lang = language === 'en' ? 'en' : 'zh-CN';
   document.title = label('徐嘉程 | Jiacheng Xu', 'Jiacheng Xu | Academic Homepage');
   document.querySelector('meta[name="description"]').content = label(
-    '徐嘉程，山东大学计算机科学与技术本科生，2027 年入学清华大学硕士。研究方向：具身智能、世界模型、空中视觉语言导航和强化学习。',
-    'Jiacheng Xu, Computer Science undergraduate at Shandong University and incoming master’s student at Tsinghua University in 2027. Research in embodied AI, world models, aerial VLN, and reinforcement learning.'
+    '徐嘉程，山东大学计算机科学与技术本科生，2027 年入学清华大学大模型科学与工程硕士。研究方向：具身智能、世界模型、空中视觉语言导航和强化学习。',
+    'Jiacheng Xu, Computer Science undergraduate at Shandong University and incoming master’s student in Large Model Science and Engineering at Tsinghua University in 2027. Research in embodied AI, world models, aerial VLN, and reinforcement learning.'
   );
   document.querySelectorAll('[data-zh]').forEach(element => { element.innerHTML = element.dataset[language]; });
   document.getElementById('language').innerHTML = `<span class="language-icon" aria-hidden="true">文</span><span>${label('English', '中文')}</span>`;
