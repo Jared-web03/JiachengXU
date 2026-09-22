@@ -1,16 +1,257 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="徐嘉程 Jiacheng Xu — 具身智能、世界模型与空中视觉语言导航。山东大学本科，2027 年入学清华大学硕士。"><meta name="theme-color" content="#173d35"><title>徐嘉程 · Jiacheng Xu</title><link rel="icon" href="assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="style.css"><script src="app.js" defer></script></head>
-<body>
-<a class="skip" href="#main" data-zh="跳至正文" data-en="Skip to content">跳至正文</a>
-<header><a class="brand" href="#home" aria-label="Jiacheng Xu home">JX<span>徐嘉程 / JIACHENG XU</span></a><nav aria-label="Main navigation"><a href="#about" data-zh="关于" data-en="About">关于</a><a href="#research" data-zh="研究" data-en="Research">研究</a><a href="#publications" data-zh="论文" data-en="Publications">论文</a><a href="#life" data-zh="生活" data-en="Beyond research">生活</a></nav><div class="controls"><button id="language" aria-label="Switch to English">EN <span>↗</span></button><button id="theme" aria-label="切换深色模式" title="切换深色模式">◐</button></div></header>
+<html lang="zh-CN"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="徐嘉程，山东大学计算机科学与技术本科生，2027 年入学清华大学硕士。研究方向：具身智能、世界模型、空中视觉语言导航和强化学习。">
+<meta name="theme-color" content="#fffae8"><title>徐嘉程 | Jiacheng Xu</title>
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="style.css?v=2">
+<script src="data.js?v=2" defer></script><script src="app.js?v=2" defer></script>
+</head><body><svg class="icon-defs" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
+<symbol id="icon-person" viewBox="0 0 24 24"><circle cx="12" cy="7" r="4"/><path d="M4 22v-3a8 8 0 0 1 16 0v3z"/></symbol>
+<symbol id="icon-school" viewBox="0 0 24 24"><path d="m1 8 11-6 11 6-11 6zm4 5 7 4 7-4v6l-7 3-7-3zM22 10v9"/></symbol>
+<symbol id="icon-research" viewBox="0 0 24 24"><path d="M8 1h8v3h-1v6l7 11v2H2v-2L9 10V4H8zm2 13-4 7h12l-4-7z"/></symbol>
+<symbol id="icon-paper" viewBox="0 0 24 24"><path d="M4 1h11l5 5v17H4zm10 2v5h5M7 11h10M7 15h10M7 19h7" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+<symbol id="icon-cup" viewBox="0 0 24 24"><path d="M6 2h12v8a6 6 0 0 1-5 6v4h5v3H6v-3h5v-4a6 6 0 0 1-5-6zM6 4H2v4a5 5 0 0 0 5 5M18 4h4v4a5 5 0 0 1-5 5" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+<symbol id="icon-code" viewBox="0 0 24 24"><path d="m7 5-6 7 6 7M17 5l6 7-6 7M14 2l-4 20" fill="none" stroke="currentColor" stroke-width="2"/></symbol></defs></svg><a href="#main" class="skip" data-zh="跳至正文" data-en="Skip to content">跳至正文</a>
+
+<div class="layout" id="top">
+<aside class="sidebar" aria-label="Profile">
+
+<div class="side-card profile"><img class="avatar" src="assets/portrait.jpg" width="108" height="138" alt="徐嘉程 / Jiacheng Xu">
+
+<h1>徐嘉程
+</h1>
+<p class="english-name">Jiacheng Xu
+</p>
+
+<div class="preferences"><button id="theme" type="button" aria-label="切换深色模式" aria-pressed="false"><span class="theme-switch" aria-hidden="true">☾</span><span data-zh="浅色 / 深色" data-en="Day / Night">浅色 / 深色</span></button><button id="language" type="button" aria-label="Switch to English"><span class="language-icon" aria-hidden="true">文</span><span>English</span></button>
+</div>
+
+<div class="profile-lines">
+<p data-zh="山东大学 · 计算机科学与技术" data-en="Shandong University&lt;br&gt;Computer Science &amp; Technology">山东大学 · 计算机科学与技术
+</p>
+<p data-zh="清华大学 · 2027 级硕士生&lt;br&gt;&lt;span class=&quot;muted&quot;&gt;即将入学&lt;/span&gt;" data-en="Tsinghua University&lt;br&gt;Incoming master’s student, 2027">清华大学 · 2027 级硕士生<br><span class="muted">即将入学</span>
+</p>
+<p class="email"><a href="mailto:18663198568@163.com">18663198568@163.com</a>
+</p>
+</div>
+
+<div class="social-links"><a href="https://github.com/Jared-web03" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 1a11 11 0 0 0-3.5 21.4c.5.1.7-.2.7-.5v-2c-3 .7-3.7-1.3-3.7-1.3-.5-1.3-1.2-1.6-1.2-1.6-1-.7.1-.7.1-.7 1.1.1 1.7 1.1 1.7 1.1 1 1.7 2.6 1.2 3.2.9.1-.7.4-1.2.7-1.5-2.4-.3-4.9-1.2-4.9-5.4 0-1.2.4-2.2 1.1-3-.1-.3-.5-1.4.1-2.9 0 0 .9-.3 3 1.1a10.4 10.4 0 0 1 5.5 0c2.1-1.4 3-1.1 3-1.1.6 1.5.2 2.6.1 2.9.7.8 1.1 1.8 1.1 3 0 4.2-2.5 5.1-4.9 5.4.4.3.7 1 .7 2v3c0 .3.2.6.7.5A11 11 0 0 0 12 1"/></svg>GitHub</a><a href="mailto:18663198568@163.com"><span class="mail-icon" aria-hidden="true">✉</span>Email</a>
+</div>
+</div>
+
+<div class="side-card interests">
+<h2><span data-zh="研究方向" data-en="Research interests">研究方向</span>
+</h2>
+<div class="tags"><span data-zh="具身智能" data-en="Embodied AI">具身智能</span><span data-zh="世界模型" data-en="World Models">世界模型</span><span data-zh="无人机 VLN" data-en="Aerial VLN">无人机 VLN</span><span data-zh="强化学习" data-en="Reinforcement Learning">强化学习</span>
+</div>
+</div>
+
+<div class="side-card timeline">
+<h2><span data-zh="教育时间线" data-en="Education timeline">教育时间线</span>
+</h2>
+<ol>
+<li><time>2027</time>
+<p data-zh="入学清华大学硕士" data-en="Begin master’s studies at Tsinghua University">入学清华大学硕士
+</p>
+</li>
+<li><time>2023–2027</time>
+<p data-zh="山东大学&lt;br&gt;计算机科学与技术本科" data-en="Shandong University&lt;br&gt;B.S. in Computer Science">山东大学<br>计算机科学与技术本科
+</p>
+</li>
+</ol>
+</div>
+
+</aside>
 <main id="main">
-<section class="hero wrap" id="home"><div class="hero-copy"><div class="eyebrow">RESEARCH · CURIOSITY · LIFE</div><div class="next" data-zh="下一站 · 清华大学，2027" data-en="NEXT CHAPTER · TSINGHUA, 2027">下一站 · 清华大学，2027</div><h1><span data-zh="你好，我是" data-en="Hello, I’m">你好，我是</span><strong data-zh="徐嘉程。" data-en="Jiacheng Xu.">徐嘉程。</strong></h1><p class="hero-sub" data-zh="探索智能如何理解世界，<br>也在球场上，感受真实世界。" data-en="Exploring how intelligence understands the world.<br>Finding my rhythm on the basketball court.">探索智能如何理解世界，<br>也在球场上，感受真实世界。</p><p class="affiliation" data-zh="山东大学 · 计算机科学与技术本科<br>清华大学 · 2027 年入学硕士生" data-en="B.S. student in Computer Science · Shandong University<br>Incoming master’s student · Tsinghua University, 2027">山东大学 · 计算机科学与技术本科<br>清华大学 · 2027 年入学硕士生</p><div class="hero-links"><a class="primary" href="mailto:18663198568@163.com"><span data-zh="联系我" data-en="Get in touch">联系我</span> ↗</a><a href="https://github.com/Jared-web03" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="#publications"><span data-zh="查看研究" data-en="Explore research">查看研究</span> ↓</a></div></div><div class="portrait-scene"><div class="orbital orbital-one"></div><div class="orbital orbital-two"></div><div class="portrait-frame"><img src="assets/portrait.jpg" alt="徐嘉程 / Jiacheng Xu" width="480" height="640"><div class="portrait-label">JIACHENG XU <span>徐嘉程</span></div></div><span class="scene-note">UNDERSTAND. IMAGINE. ACT.</span><div class="coordinate">37.53° N<br>122.06° E · WEIHAI</div><svg class="star" viewBox="0 0 60 60" aria-hidden="true"><path d="M30 0v60M0 30h60M9 9l42 42M9 51L51 9"/></svg></div></section>
-<div class="interest-strip"><div class="wrap"><span data-zh="研究兴趣" data-en="RESEARCH INTERESTS">研究兴趣</span><b data-zh="具身智能" data-en="Embodied AI">具身智能</b><i>✳</i><b data-zh="世界模型" data-en="World Models">世界模型</b><i>✳</i><b data-zh="空中视觉语言导航" data-en="Aerial VLN">空中视觉语言导航</b><i>✳</i><b data-zh="强化学习" data-en="Reinforcement Learning">强化学习</b></div></div>
-<section class="wrap section about" id="about"><div class="section-heading"><span class="eyebrow">01 / ABOUT ME</span><h2 data-zh="保持好奇，<br>向真实世界出发。" data-en="Stay curious.<br>Explore the real world.">保持好奇，<br>向真实世界出发。</h2></div><div><p class="intro" data-zh="我是徐嘉程，目前就读于山东大学计算机科学与技术专业，将于 2027 年入学清华大学攻读硕士。" data-en="I’m Jiacheng Xu, an undergraduate in Computer Science and Technology at Shandong University. I will join Tsinghua University as a master’s student in 2027.">我是徐嘉程，目前就读于山东大学计算机科学与技术专业，将于 2027 年入学清华大学攻读硕士。</p><p data-zh="我的研究聚焦具身智能、世界模型、无人机视觉语言导航与强化学习。在清华大学陈鑫磊老师课题组，我参与 WorldVLN 与 SAWMAN 研究，探索从世界预测走向闭环行动的智能系统；也曾在中科院刘继峰老师课题组开展天文光谱大模型研究。" data-en="My research focuses on embodied AI, world models, aerial vision-language navigation, and reinforcement learning. With Prof. Xinlei Chen’s group at Tsinghua University, I work on WorldVLN and SAWMAN, exploring how world prediction can inform closed-loop action. I have also worked on astronomical spectral foundation models with Prof. Jifeng Liu’s group at the Chinese Academy of Sciences.">我的研究聚焦具身智能、世界模型、无人机视觉语言导航与强化学习。在清华大学陈鑫磊老师课题组，我参与 WorldVLN 与 SAWMAN 研究，探索从世界预测走向闭环行动的智能系统；也曾在中科院刘继峰老师课题组开展天文光谱大模型研究。</p><div class="stats"><div><strong>1<span>/102</span></strong><span data-zh="综合成绩排名" data-en="Overall academic rank">综合成绩排名</span></div><div><strong>92.5<span>/100</span></strong><span data-zh="综合成绩" data-en="Overall score">综合成绩</span></div><div><strong>2<span> ×</span></strong><span data-zh="国家奖学金" data-en="National Scholarships">国家奖学金</span></div></div><div class="education"><div><span>2027 →</span><p><b data-zh="清华大学" data-en="Tsinghua University">清华大学</b><small data-zh="硕士 · 即将入学" data-en="Master’s program · Incoming">硕士 · 即将入学</small></p></div><div><span>2023–2027</span><p><b data-zh="山东大学" data-en="Shandong University">山东大学</b><small data-zh="计算机科学与技术 · 本科（预计 2027 年毕业）" data-en="B.S. in Computer Science and Technology · Expected 2027">计算机科学与技术 · 本科（预计 2027 年毕业）</small></p></div></div></div></section>
-<section class="research-bg" id="research"><div class="wrap section"><div class="title-row"><div><span class="eyebrow">02 / SELECTED RESEARCH</span><h2 data-zh="从感知，到想象与行动。" data-en="From perception to imagination and action.">从感知，到想象与行动。</h2></div><span class="section-note" data-zh="三个方向，同一份好奇心。" data-en="Three directions. One curiosity.">三个方向，同一份好奇心。</span></div><div id="research-list"></div></div></section>
-<section class="wrap section" id="publications"><div class="title-row"><div><span class="eyebrow">03 / PUBLICATIONS</span><h2 data-zh="论文与预印本" data-en="Publications & preprints">论文与预印本</h2></div><p class="section-note" data-zh="* 共同第一作者 · 状态依据所提供简历" data-en="* Equal contribution · Status as listed in my CV">* 共同第一作者 · 状态依据所提供简历</p></div><div id="paper-list"></div></section>
-<section class="wrap section honors" id="honors"><div><span class="eyebrow">04 / RECOGNITION</span><h2 data-zh="一路积累，一路成长。" data-en="Learning, building, growing.">一路积累，一路成长。</h2><p data-zh="研究之外，也在竞赛与协作中打磨想法。" data-en="Developing ideas through competitions and collaboration.">研究之外，也在竞赛与协作中打磨想法。</p><div class="skills"><span>Python / C++</span><span>PyTorch</span><span data-zh="无人机真机部署" data-en="Real-world UAV deployment">无人机真机部署</span><span data-zh="分布式训练" data-en="Distributed training">分布式训练</span></div></div><div id="award-list"></div></section>
-<section class="wrap life" id="life"><div class="court" aria-hidden="true"><svg viewBox="0 0 440 360"><rect x="20" y="20" width="400" height="320" rx="4"/><path d="M220 20v320"/><circle cx="220" cy="180" r="54"/><path d="M20 110h90v140H20M420 110h-90v140h90"/><path d="M110 110a70 70 0 0 1 0 140M330 110a70 70 0 0 0 0 140M20 44c235 0 235 272 0 272M420 44c-235 0-235 272 0 272"/><circle cx="51" cy="180" r="9"/><circle cx="389" cy="180" r="9"/></svg><div class="basketball"><svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="47"/><path d="M3 50h94M50 3v94M17 17c42 0 42 66 0 66M83 17c-42 0-42 66 0 66"/></svg></div><span>OFFLINE, ON COURT.</span></div><div class="life-copy"><span class="eyebrow">05 / BEYOND RESEARCH</span><h2 data-zh="代码之外，<br>球场之上。" data-en="Beyond the code.<br>On the court.">代码之外，<br>球场之上。</h2><p data-zh="篮球是我生活里不可缺少的一部分。学习与研究之外，我喜欢走上球场，享受运动和比赛本身。" data-en="Basketball is an essential part of my life. Outside studying and research, I love getting on the court and enjoying the game.">篮球是我生活里不可缺少的一部分。学习与研究之外，我喜欢走上球场，享受运动和比赛本身。</p><span class="life-tag" data-zh="保持热爱，继续向前。" data-en="Keep the passion. Keep moving.">保持热爱，继续向前。</span></div></section>
-<section class="wrap contact"><div><span class="eyebrow">LET’S CONNECT</span><h2 data-zh="欢迎交流，也欢迎约球。" data-en="Let’s talk research. Or basketball.">欢迎交流，也欢迎约球。</h2></div><a href="mailto:18663198568@163.com">18663198568@163.com <span>↗</span></a></section>
-</main><footer class="wrap"><span>© 2026 Jiacheng Xu · 徐嘉程</span><span data-zh="求知有路，热爱无界。" data-en="Curiosity in research. Passion in life.">求知有路，热爱无界。</span><a href="#home" data-zh="回到顶部 ↑" data-en="Back to top ↑">回到顶部 ↑</a></footer></body></html>
+<header class="welcome">
+<p class="overline">JIACHENG XU / ACADEMIC HOMEPAGE
+</p>
+<div class="welcome-title">
+<div data-zh="欢迎来到 &lt;span class=&quot;gradient&quot;&gt;徐嘉程的个人主页&lt;/span&gt;" data-en="Welcome to &lt;span class=&quot;gradient&quot;&gt;Jiacheng Xu’s Homepage&lt;/span&gt;">欢迎来到 <span class="gradient">徐嘉程的个人主页</span>
+</div>
+</div>
+<p class="welcome-sub" data-zh="具身智能 · 世界模型 · 空中视觉语言导航" data-en="Embodied AI · World Models · Aerial Vision-Language Navigation">具身智能 · 世界模型 · 空中视觉语言导航
+</p>
+</header>
+<section id="about" class="section">
+<h2><svg aria-hidden="true"><use href="#icon-person"/></svg><span data-zh="个人简介" data-en="About Me">个人简介</span>
+</h2>
+<div class="panel intro">
+<p data-zh="我是&lt;strong&gt;徐嘉程&lt;/strong&gt;，现为山东大学计算机科学与技术专业本科生（2023–2027），将于 &lt;strong class=&quot;purple&quot;&gt;2027 年入学清华大学攻读硕士&lt;/strong&gt;。" data-en="I am &lt;strong&gt;Jiacheng Xu&lt;/strong&gt;, an undergraduate in Computer Science and Technology at Shandong University (2023–2027). I will join &lt;strong class=&quot;purple&quot;&gt;Tsinghua University as a master’s student in 2027&lt;/strong&gt;.">我是<strong>徐嘉程</strong>，现为山东大学计算机科学与技术专业本科生（2023–2027），将于 <strong class="purple">2027 年入学清华大学攻读硕士</strong>。
+</p>
+<p data-zh="我的研究兴趣主要包括&lt;strong&gt;具身智能、世界模型、无人机视觉语言导航与强化学习&lt;/strong&gt;。在清华大学陈鑫磊老师课题组，我参与 WorldVLN 与 SAWMAN 研究，关注如何将世界模型的预测能力转化为真实环境中的空间理解与动作决策。此前也在中科院刘继峰老师课题组开展天文光谱大模型研究，探索低信噪比光谱重建与恒星参数预测。" data-en="My research interests include &lt;strong&gt;embodied AI, world models, aerial vision-language navigation, and reinforcement learning&lt;/strong&gt;. With Prof. Xinlei Chen’s group at Tsinghua University, I work on WorldVLN and SAWMAN, studying how world-model predictions can support spatial understanding and action decisions in real environments. I have also worked on spectral foundation models with Prof. Jifeng Liu’s group at the Chinese Academy of Sciences, focusing on low-SNR reconstruction and stellar parameter prediction.">我的研究兴趣主要包括<strong>具身智能、世界模型、无人机视觉语言导航与强化学习</strong>。在清华大学陈鑫磊老师课题组，我参与 WorldVLN 与 SAWMAN 研究，关注如何将世界模型的预测能力转化为真实环境中的空间理解与动作决策。此前也在中科院刘继峰老师课题组开展天文光谱大模型研究，探索低信噪比光谱重建与恒星参数预测。
+</p>
+<p data-zh="我主要参与模型设计、训练与推理实现，也关注仿真环境到真实无人机平台的部署。学习方面，综合成绩排名 &lt;strong&gt;1/102&lt;/strong&gt;，曾两次获得国家奖学金，并参与“挑战杯”、软件创新与 AIGC 等竞赛。" data-en="My work spans model design, training, inference, and deployment from simulation to real UAV platforms. Academically, I rank &lt;strong&gt;1st out of 102&lt;/strong&gt; in overall performance and have received two National Scholarships. I also participate in the Challenge Cup, software innovation, and AIGC competitions.">我主要参与模型设计、训练与推理实现，也关注仿真环境到真实无人机平台的部署。学习方面，综合成绩排名 <strong>1/102</strong>，曾两次获得国家奖学金，并参与“挑战杯”、软件创新与 AIGC 等竞赛。
+</p>
+<p data-zh="科研学习之外，我喜欢打篮球。欢迎通过邮件交流相关研究与合作想法。" data-en="Outside research and study, I enjoy basketball. Feel free to email me to discuss research or collaboration.">科研学习之外，我喜欢打篮球。欢迎通过邮件交流相关研究与合作想法。
+</p>
+</div>
+</section>
+<section id="education" class="section">
+<h2><svg aria-hidden="true"><use href="#icon-school"/></svg><span data-zh="教育背景" data-en="Education">教育背景</span>
+</h2>
+<div class="panel">
+<div class="education-row">
+<div>
+<h3 data-zh="清华大学" data-en="Tsinghua University">清华大学
+</h3>
+<p data-zh="硕士 · 即将入学" data-en="Master’s program · Incoming">硕士 · 即将入学
+</p>
+</div><time>2027 –</time>
+</div>
+<div class="education-row">
+<div>
+<h3 data-zh="山东大学" data-en="Shandong University">山东大学
+</h3>
+<p data-zh="计算机科学与技术 · 本科 · 威海" data-en="B.S. in Computer Science and Technology · Weihai">计算机科学与技术 · 本科 · 威海
+</p>
+</div><time>2023.09 – 2027.06<br><small data-zh="预计毕业" data-en="Expected graduation">预计毕业</small></time>
+</div>
+<div class="academic-stats">
+<div><span data-zh="综合成绩" data-en="Overall score">综合成绩</span><strong>92.5 / 100</strong><small data-zh="排名 1 / 102" data-en="Rank 1 / 102">排名 1 / 102</small>
+</div>
+<div><span data-zh="专业成绩" data-en="Major score">专业成绩</span><strong>92.88 / 100</strong><small data-zh="排名 3 / 102" data-en="Rank 3 / 102">排名 3 / 102</small>
+</div>
+<div><span data-zh="英语能力" data-en="English">英语能力</span><strong>CET-6 · 484</strong><small data-zh="大学英语六级" data-en="College English Test, Band 6">大学英语六级</small>
+</div>
+</div>
+<h4><span data-zh="主修课程" data-en="Selected coursework">主修课程</span>
+</h4>
+<div class="courses">
+<div><span data-zh="概率论与数理统计" data-en="Probability &amp; Statistics">概率论与数理统计</span><b>100</b>
+</div>
+<div><span data-zh="高等数学" data-en="Advanced Mathematics">高等数学</span><b>99</b>
+</div>
+<div><span data-zh="线性代数" data-en="Linear Algebra">线性代数</span><b>99</b>
+</div>
+<div><span data-zh="离散数学" data-en="Discrete Mathematics">离散数学</span><b>98</b>
+</div>
+<div><span data-zh="数据结构" data-en="Data Structures">数据结构</span><b>97</b>
+</div>
+<div><span data-zh="Java 程序设计" data-en="Java Programming">Java 程序设计</span><b>96</b>
+</div>
+<div><span data-zh="计算机组成原理" data-en="Computer Organization">计算机组成原理</span><b>95</b>
+</div>
+<div><span data-zh="高性能计算" data-en="High-Performance Computing">高性能计算</span><b>95</b>
+</div>
+</div>
+</div>
+</section>
+<section id="research" class="section">
+<h2><svg aria-hidden="true"><use href="#icon-research"/></svg><span data-zh="研究经历" data-en="Research Experience">研究经历</span>
+</h2>
+<div class="panel research-list">
+<article class="research-item">
+<h3 data-zh="WorldVLN · 自回归世界动作模型" data-en="WorldVLN · Autoregressive World Action Model">WorldVLN · 自回归世界动作模型
+</h3>
+<p class="affiliation" data-zh="清华大学 · 陈鑫磊老师课题组" data-en="Tsinghua University · Prof. Xinlei Chen’s group">清华大学 · 陈鑫磊老师课题组
+</p>
+<ul>
+<li><span data-zh="&lt;strong&gt;研究问题：&lt;/strong&gt;统一建模空中视觉语言导航中的语言指令理解、三维空间感知与连续动作决策，以预测驱动的世界动作建模替代直接的观察到动作映射。" data-en="&lt;strong&gt;Problem:&lt;/strong&gt; Unifying language instruction understanding, 3D spatial perception, and continuous action decisions in aerial VLN through prediction-driven world-action modeling."><strong>研究问题：</strong>统一建模空中视觉语言导航中的语言指令理解、三维空间感知与连续动作决策，以预测驱动的世界动作建模替代直接的观察到动作映射。</span>
+</li>
+<li><span data-zh="&lt;strong&gt;方法与贡献：&lt;/strong&gt;主要负责自回归世界模型骨干与 Action Decoder 的设计和训练，包含 latent-to-action 解码、自回归交互流程，以及整体训练推理调试；参与 Action-aware GRPO 的前期框架搭建和后期优化。" data-en="&lt;strong&gt;Method &amp; contribution:&lt;/strong&gt; Primarily responsible for designing and training the autoregressive world-model backbone and Action Decoder, including latent-to-action decoding, autoregressive interaction, and training/inference debugging; contributed to the Action-aware GRPO framework and optimization."><strong>方法与贡献：</strong>主要负责自回归世界模型骨干与 Action Decoder 的设计和训练，包含 latent-to-action 解码、自回归交互流程，以及整体训练推理调试；参与 Action-aware GRPO 的前期框架搭建和后期优化。</span>
+</li>
+<li><span data-zh="&lt;strong&gt;实验与验证：&lt;/strong&gt;在 UAV-Flow 与 IndoorUAV 上进行评测，并在真实无人机平台上验证零样本迁移能力。" data-en="&lt;strong&gt;Evaluation:&lt;/strong&gt; Evaluated on UAV-Flow and IndoorUAV, with zero-shot transfer demonstrated on a real UAV platform."><strong>实验与验证：</strong>在 UAV-Flow 与 IndoorUAV 上进行评测，并在真实无人机平台上验证零样本迁移能力。</span>
+</li>
+</ul><a class="inline-link" href="#paper-worldvln"><span data-zh="查看对应论文与方法图 →" data-en="Paper and method figure →">查看对应论文与方法图 →</span></a>
+</article>
+<article class="research-item">
+<h3 data-zh="SAWMAN · 空间感知世界模型智能体" data-en="SAWMAN · Spatial-Aware World Model Agent">SAWMAN · 空间感知世界模型智能体
+</h3>
+<p class="affiliation" data-zh="清华大学 · 陈鑫磊老师课题组" data-en="Tsinghua University · Prof. Xinlei Chen’s group">清华大学 · 陈鑫磊老师课题组
+</p>
+<ul>
+<li><span data-zh="&lt;strong&gt;研究问题：&lt;/strong&gt;针对无人机目标导航中的局部视野限制与空间上下文不足，引入世界模型进行实时六视角空间想象。" data-en="&lt;strong&gt;Problem:&lt;/strong&gt; Addressing limited local views and insufficient spatial context in aerial goal navigation with real-time, six-view world-model imagination."><strong>研究问题：</strong>针对无人机目标导航中的局部视野限制与空间上下文不足，引入世界模型进行实时六视角空间想象。</span>
+</li>
+<li><span data-zh="&lt;strong&gt;核心方法：&lt;/strong&gt;构建动作条件六视角世界模型与“想象—决策”闭环，以前视角 PSNR 检查预测可靠性；通过多视角因果蒸馏，将生成过程从 50 步压缩到 2 步，实现约 12 FPS 在线空间想象。" data-en="&lt;strong&gt;Method:&lt;/strong&gt; An action-conditioned six-view world model supports an imagination–decision loop, with front-view PSNR checking prediction reliability. Multi-view causal distillation reduces generation from 50 steps to 2, enabling approximately 12 FPS online imagination."><strong>核心方法：</strong>构建动作条件六视角世界模型与“想象—决策”闭环，以前视角 PSNR 检查预测可靠性；通过多视角因果蒸馏，将生成过程从 50 步压缩到 2 步，实现约 12 FPS 在线空间想象。</span>
+</li>
+<li><span data-zh="&lt;strong&gt;实验结果：&lt;/strong&gt;在 EmbodiedNav-Bench 与 UAV-ON 上，成功率分别平均提升 7.8 和 19.1 个百分点，整体平均提升 13.4 个百分点。" data-en="&lt;strong&gt;Results:&lt;/strong&gt; Average success-rate gains of 7.8 and 19.1 percentage points on EmbodiedNav-Bench and UAV-ON, respectively, with an overall average gain of 13.4 points."><strong>实验结果：</strong>在 EmbodiedNav-Bench 与 UAV-ON 上，成功率分别平均提升 7.8 和 19.1 个百分点，整体平均提升 13.4 个百分点。</span>
+</li>
+</ul><a class="inline-link" href="#paper-sawman"><span data-zh="查看对应论文与方法图 →" data-en="Paper and method figure →">查看对应论文与方法图 →</span></a>
+</article>
+<article class="research-item">
+<h3 data-zh="天文光谱大模型 · 低信噪比重建与参数预测" data-en="Spectral Foundation Models · Low-SNR Reconstruction &amp; Parameter Prediction">天文光谱大模型 · 低信噪比重建与参数预测
+</h3>
+<p class="affiliation" data-zh="中国科学院 · 刘继峰老师课题组" data-en="Chinese Academy of Sciences · Prof. Jifeng Liu’s group">中国科学院 · 刘继峰老师课题组
+</p>
+<ul>
+<li><span data-zh="&lt;strong&gt;研究问题：&lt;/strong&gt;面向低信噪比天文光谱，提升有效温度 Teff、表面重力 log g 和金属丰度 [Fe/H] 等恒星参数的预测稳定性。" data-en="&lt;strong&gt;Problem:&lt;/strong&gt; Improving the robustness of stellar parameter prediction—effective temperature Teff, surface gravity log g, and metallicity [Fe/H]—from low-SNR astronomical spectra."><strong>研究问题：</strong>面向低信噪比天文光谱，提升有效温度 Teff、表面重力 log g 和金属丰度 [Fe/H] 等恒星参数的预测稳定性。</span>
+</li>
+<li><span data-zh="&lt;strong&gt;方法与训练：&lt;/strong&gt;将连续光谱 flux 离散为数字 token，采用 masked diffusion-style 建模。通过高信噪比模拟数据预训练、低信噪比真实观测微调，学习可迁移的光谱表示。" data-en="&lt;strong&gt;Method &amp; training:&lt;/strong&gt; Discretizing continuous spectral flux into digit tokens with masked diffusion-style modeling. Pretraining on high-SNR synthetic spectra and fine-tuning on low-SNR observations learns transferable spectral representations."><strong>方法与训练：</strong>将连续光谱 flux 离散为数字 token，采用 masked diffusion-style 建模。通过高信噪比模拟数据预训练、低信噪比真实观测微调，学习可迁移的光谱表示。</span>
+</li>
+</ul><a class="inline-link" href="#paper-spectra"><span data-zh="查看对应论文与方法图 →" data-en="Paper and method figure →">查看对应论文与方法图 →</span></a>
+</article>
+</div>
+</section>
+<section id="publications" class="section">
+<h2><svg aria-hidden="true"><use href="#icon-paper"/></svg><span data-zh="论文与预印本" data-en="Publications &amp; Preprints">论文与预印本</span>
+</h2>
+<div class="panel publications">
+<div class="paper-toolbar">
+<p class="note" data-zh="* 表示共同第一作者。" data-en="* Equal contribution.">* 表示共同第一作者。
+</p>
+<div class="paper-actions"><button id="expand-all" type="button"><span data-zh="全部展开" data-en="Expand all">全部展开</span></button><button id="collapse-all" type="button"><span data-zh="全部收起" data-en="Collapse all">全部收起</span></button>
+</div>
+</div>
+<div id="paper-list">
+</div>
+</div>
+</section>
+<section id="competitions" class="section">
+<h2><svg aria-hidden="true"><use href="#icon-cup"/></svg><span data-zh="学习与竞赛" data-en="Competitions &amp; Technical Challenges">学习与竞赛</span>
+</h2>
+<div class="panel">
+<div id="competition-list">
+</div>
+</div>
+</section>
+<section id="honors" class="section">
+<h2><svg aria-hidden="true"><use href="#icon-cup"/></svg><span data-zh="荣誉与奖励" data-en="Honors &amp; Awards">荣誉与奖励</span>
+</h2>
+<div class="panel">
+<div id="honor-list">
+</div>
+</div>
+</section>
+<section id="skills" class="section">
+<h2><svg aria-hidden="true"><use href="#icon-code"/></svg><span data-zh="技术能力" data-en="Technical Skills">技术能力</span>
+</h2>
+<div class="panel skills">
+<div>
+<h3 data-zh="编程语言" data-en="Programming">编程语言
+</h3>
+<p data-zh="Python / C++（熟练）；Java / C（熟悉）。" data-en="Proficient in Python / C++; familiar with Java / C.">Python / C++（熟练）；Java / C（熟悉）。
+</p>
+</div>
+<div>
+<h3 data-zh="模型与仿真" data-en="Models &amp; simulation">模型与仿真
+</h3>
+<p data-zh="PyTorch 等深度学习框架、UE 仿真环境，以及软硬件结合的真机部署与实验。" data-en="Deep learning with PyTorch, UE simulation environments, and hardware–software integration for real-world deployment and experiments.">PyTorch 等深度学习框架、UE 仿真环境，以及软硬件结合的真机部署与实验。
+</p>
+</div>
+<div>
+<h3 data-zh="训练与计算" data-en="Training &amp; compute">训练与计算
+</h3>
+<p data-zh="具有 32×A100、8×H800 集群及沐曦、海光等国产算力平台使用经验，参与服务器调度与大模型训练、推理并行化。" data-en="Experience with 32×A100 and 8×H800 clusters, as well as MetaX and Hygon platforms; server scheduling and parallel training/inference for large models.">具有 32×A100、8×H800 集群及沐曦、海光等国产算力平台使用经验，参与服务器调度与大模型训练、推理并行化。
+</p>
+</div>
+<div>
+<h3 data-zh="开源实践" data-en="Open source">开源实践
+</h3>
+<p data-zh="维护论文相关训练与推理代码。代码仓库：&lt;a href=&quot;https://github.com/Jared-web03&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;github.com/Jared-web03 ↗&lt;/a&gt;。" data-en="Maintaining training and inference code for research projects. Repositories: &lt;a href=&quot;https://github.com/Jared-web03&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;github.com/Jared-web03 ↗&lt;/a&gt;.">维护论文相关训练与推理代码。代码仓库：<a href="https://github.com/Jared-web03" target="_blank" rel="noopener noreferrer">github.com/Jared-web03 ↗</a>。
+</p>
+</div>
+</div>
+</section>
+<footer><span>© 2026 徐嘉程 · Jiacheng Xu</span><a href="#top"><span data-zh="回到顶部 ↑" data-en="Back to top ↑">回到顶部 ↑</span></a>
+</footer>
+</main>
+<aside class="toc">
+<nav aria-label="Contents">
+<h2><span data-zh="内容导航" data-en="Contents">内容导航</span>
+</h2><a href="#about"><span class="nav-dot" aria-hidden="true"></span><span data-zh="个人简介" data-en="About">个人简介</span></a><a href="#education"><span class="nav-dot" aria-hidden="true"></span><span data-zh="教育背景" data-en="Education">教育背景</span></a><a href="#research"><span class="nav-dot" aria-hidden="true"></span><span data-zh="研究经历" data-en="Research">研究经历</span></a><a href="#publications"><span class="nav-dot" aria-hidden="true"></span><span data-zh="论文与预印本" data-en="Publications">论文与预印本</span></a><a href="#competitions"><span class="nav-dot" aria-hidden="true"></span><span data-zh="学习与竞赛" data-en="Competitions">学习与竞赛</span></a><a href="#honors"><span class="nav-dot" aria-hidden="true"></span><span data-zh="荣誉与奖励" data-en="Honors">荣誉与奖励</span></a><a href="#skills"><span class="nav-dot" aria-hidden="true"></span><span data-zh="技术能力" data-en="Skills">技术能力</span></a>
+</nav>
+</aside>
+</div><noscript>
+<p>请启用 JavaScript 以查看论文列表并切换语言。Enable JavaScript to view publications and switch languages.
+</p></noscript></body></html>

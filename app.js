@@ -1,29 +1,130 @@
-const research = [
- {name:'WorldVLN',tag:['自回归世界动作模型','Autoregressive World Action Model'],group:['清华大学 · 陈鑫磊老师课题组','Tsinghua University · Prof. Xinlei Chen’s group'],description:['将空中导航从直接的观察到动作映射，转向由世界预测驱动的闭环决策。主要负责世界模型骨干与 Action Decoder 的设计和训练，并参与 Action-aware GRPO 框架搭建及优化。','Reframing aerial navigation as prediction-driven, closed-loop action. I led the design and training of the world-model backbone and Action Decoder, and contributed to the Action-aware GRPO framework and training optimization.'],links:[['Paper','https://arxiv.org/abs/2605.15964'],['Project','https://embodiedcity.github.io/WorldVLN/']],art:'world'},
- {name:'SAWMAN',tag:['空间感知世界模型智能体','Spatial-Aware World Model Agent'],group:['清华大学 · 陈鑫磊老师课题组','Tsinghua University · Prof. Xinlei Chen’s group'],description:['以动作条件六视角世界模型补全空间上下文，构建“想象—决策”闭环。多视角因果蒸馏将生成从 50 步压缩至 2 步，实现约 12 FPS 在线空间想象。','An action-conditioned, six-view world model provides spatial context for an imagination–decision loop. Multi-view causal distillation reduces generation from 50 steps to 2, enabling online spatial imagination at approximately 12 FPS.'],links:[],art:'spatial'},
- {name:'Astronomical Spectra as Language',tag:['天文光谱大模型','Spectral Foundation Models'],group:['中国科学院 · 刘继峰老师课题组','Chinese Academy of Sciences · Prof. Jifeng Liu’s group'],description:['将连续光谱转化为数字 token，结合 masked diffusion-style 建模与迁移学习，探索低信噪比光谱重建和恒星物理参数预测。','Tokenizing continuous spectra and combining masked diffusion-style modeling with transfer learning for low-SNR spectral reconstruction and stellar parameter prediction.'],links:[['Code','https://github.com/Yu-Yang-Li/StarWhisper']],art:'spectrum'}
-];
-const papers=[
- {venue:'NeurIPS 2026',status:['投稿中 · 共同一作','Submitted · Co-first author'],title:'WorldVLN: Autoregressive World Action Model for Aerial Vision-Language Navigation',authors:'Baining Zhao*, Jiacheng Xu*, Weicheng Feng, Chen Gao, Xinlei Chen',links:research[0].links},
- {venue:'iScience',status:['已接收 · 第一作者','Accepted · First author'],title:'Astronomical Spectra as Language: Order-Agnostic Foundation Model for Low-SNR Reconstruction and Stellar Parameter Prediction',authors:'Jiacheng Xu, Xinrui Song, Cunshi Wang, Yuyang Li, Zhiwen Fu, Ali Luo, Jifeng Liu',links:research[2].links},
- {venue:'NeurIPS 2026',status:['投稿中','Submitted'],title:'Beyond Denoising: Noise-Resilient Representation Alignment for Real-World Depth Perception',authors:'Xiujian Liang, Zheng Huang, Jiacheng Xu, Zehao Du, Mingyang Sun, Anda Cheng, Zhenxing Qian, Cewu Lu, Jianhua Sun',links:[]},
- {venue:'AAAI 2027',status:['投稿中','Submitted'],title:'SAWMAN: Spatial-Aware World Model Agent for Aerial Embodied Navigation',authors:'Jianjie Fang, Ziyou Wang, Baining Zhao, Jiacheng Xu, Yuchao Huang, Peizhi Tang, Chen Gao, Xin Wang, Xinlei Chen, Yong Li, Wenwu Zhu',links:[]},
- {venue:'KDD · Oral',status:['已接收 · CCF-A','Accepted · CCF-A'],title:'How Far Are Large Multimodal Models from Human-Level Spatial Action? A Benchmark for Goal-Oriented Embodied Navigation in Urban Airspace',authors:'Baining Zhao, Ziyou Wang, Jianjie Fang, Zile Zhou, Yanggang Xu, Yatai Ji, Jiacheng Xu, Qian Zhang, Weichen Zhang, Chen Gao, Xinlei Chen',links:[]},
- {venue:'EMNLP',status:['已接收','Accepted'],title:'Reason-WAM: Vision-Language Reasoning for World Action Models in Urban Aerial Goal Navigation',authors:'Baining Zhao, Shurui Peng, Yan Wang, Zhaolu Wang, Xin Zhang, Jiacheng Xu, Weicheng Feng, Ziyou Wang, Jianjie Fang, Weichen Zhang, Wei Wu, Chen Gao, Xinlei Chen, Yong Li',links:[]},
- {venue:'RAA',status:['已接收','Accepted'],title:'LightCurve MoE: A Dynamic Sparse Routing Mixture-of-Experts Architecture for Efficient Stellar Light Curve Classification',authors:'Cunshi Wang, Yu Bai, Xinrui Song, Jiacheng Xu, Henggeng Han, Yuyang Li, Xinjie Hu, Huiqin Yang, Jifeng Liu',links:[['DOI','https://doi.org/10.1088/1674-4527/adfa73']]}
-];
-const awards=[
- ['2024 / 25',['国家奖学金 × 2','National Scholarship × 2'],['2023–2024、2024–2025 学年','Academic years 2023–2024 and 2024–2025']],
- ['2025.11',['第十九届“挑战杯” · 国家特等奖','19th Challenge Cup · National Special Prize'],['AI 赛道 · 第二负责人','AI track · Second project lead']],
- ['2026.02',['WorldScore 视频模型榜第一','No. 1 on the WorldScore video-model leaderboard'],['训练测评基础设施搭建与数据过滤','Training and evaluation infrastructure; data filtering']],
- ['2025.07',['中国国际大学生创新大赛 · 省金奖','China International College Students’ Innovation Competition'],['山东省金奖 · 后端开发维护负责人','Shandong Gold Award · Backend development lead']],
- ['2025',['软件创新大赛 / AIGC 创新赛','Software Innovation / AIGC Innovation Competitions'],['两项华东赛区二等奖 · 后端开发负责人','Two East China Second Prizes · Backend development lead']],
- ['2025',['山东大学学业一等奖学金 × 2','Shandong University Academic First-Class Scholarship × 2'],['前 3% · 大一、大二','Top 3% · First and second undergraduate years']]
-];
-function art(type){const start='<svg viewBox="0 0 300 210" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">';let s='';if(type==='world'){s='<g stroke="#6d8a78" stroke-width="1"><path d="M25 147L150 70l128 77-125 57zM25 127L150 50l128 77M25 107L150 30l128 77" opacity=".3"/><path d="M69 142l43-28 42 25 48-64 43 27" stroke="#775184" stroke-width="2" stroke-dasharray="4 4"/><path d="M107 56l34-19 35 19-35 21zM141 37v40M124 47l35 19M124 66l35-19" stroke-width="2"/><circle cx="69" cy="142" r="5" fill="#df804c"/><circle cx="245" cy="102" r="5" fill="#775184"/><path d="M67 80v68M105 100v64M195 102v67M235 79v68" opacity=".3"/></g>'}else if(type==='spatial'){s='<g stroke="#6d8a78"><path d="M150 66l49 27v55l-49 27-49-27V93zM101 93l49 28 49-28M150 121v54"/><g opacity=".45"><path d="M150 66V24M199 93l44-26M199 148l44 25M150 175v22M101 148l-44 25M101 93L57 67" stroke-dasharray="4 4"/><rect x="125" y="6" width="50" height="30" rx="3"/><rect x="230" y="46" width="48" height="33" rx="3"/><rect x="230" y="158" width="48" height="33" rx="3"/><rect x="22" y="46" width="48" height="33" rx="3"/><rect x="22" y="158" width="48" height="33" rx="3"/></g><circle cx="150" cy="121" r="7" fill="#df804c" stroke="none"/></g>'}else{s='<g stroke="#6d8a78" opacity=".18"><path d="M25 40h250M25 80h250M25 120h250M25 160h250M50 30v145M100 30v145M150 30v145M200 30v145M250 30v145"/></g><path d="M25 146l15-4 10 2 10-9 8 3 8-43 7 38 8-3 9-13 10 4 8-58 8 49 8-14 8 4 10-61 9 48 9-9 11 16 8-32 9 33 8-11 8 20 8-5 10 16 9-3 10 11 10 4 11-3" stroke="#775184" stroke-width="2"/><path d="M25 160q120-100 250-12" stroke="#df804c" stroke-dasharray="4 4"/>'}return start+s+'</svg>'}
-const linkHTML=links=>links.map(([label,url])=>`<a class="text-link" href="${url}" target="_blank" rel="noopener noreferrer">${label} ↗</a>`).join('');
-let language='zh';try{language=localStorage.getItem('jx-language')||'zh'}catch{}if(new URLSearchParams(location.search).get('lang')==='en')language='en';if(!['zh','en'].includes(language))language='zh';
-function render(){const i=language==='en'?1:0;document.documentElement.lang=i?'en':'zh-CN';document.querySelectorAll('[data-zh]').forEach(el=>el.innerHTML=el.dataset[language]);document.getElementById('language').innerHTML=i?'中文 <span>↗</span>':'EN <span>↗</span>';document.getElementById('language').setAttribute('aria-label',i?'切换为中文':'Switch to English');document.title=i?'Jiacheng Xu · Embodied AI & World Models':'徐嘉程 · Jiacheng Xu';document.querySelector('meta[name="description"]').content=i?'Jiacheng Xu: embodied AI, world models, and aerial vision-language navigation. Shandong University undergraduate; incoming master’s student at Tsinghua University in 2027.':'徐嘉程：具身智能、世界模型与空中视觉语言导航。山东大学本科，2027 年入学清华大学硕士。';document.getElementById('research-list').innerHTML=research.map((r,n)=>`<article class="research-card"><div class="research-art">${art(r.art)}<span class="art-caption">${['PREDICT → ACT → UPDATE','IMAGINATION → DECISION','SIGNAL → TOKEN → KNOWLEDGE'][n]}</span></div><div><span class="number">0${n+1} / ${r.tag[i]}</span><h3>${r.name}</h3><small>${r.group[i]}</small><p>${r.description[i]}</p>${linkHTML(r.links)}</div></article>`).join('');document.getElementById('paper-list').innerHTML=papers.map(p=>`<article class="paper"><div class="paper-status"><b>${p.venue}</b><span>${p.status[i]}</span></div><div><h3>${p.title}</h3><p>${p.authors.replace('Jiacheng Xu','<strong>Jiacheng Xu</strong>')}</p>${linkHTML(p.links)}</div></article>`).join('');document.getElementById('award-list').innerHTML=awards.map(a=>`<div class="award"><span>${a[0]}</span><div><b>${a[1][i]}</b><small>${a[2][i]}</small></div></div>`).join('');themeLabel();}
-function themeLabel(){const dark=document.body.classList.contains('dark');const label=language==='en'?(dark?'Switch to light mode':'Switch to dark mode'):(dark?'切换浅色模式':'切换深色模式');document.getElementById('theme').setAttribute('aria-label',label);document.getElementById('theme').title=label;document.getElementById('theme').setAttribute('aria-pressed',String(dark));}
-try{if(localStorage.getItem('jx-theme')==='dark')document.body.classList.add('dark')}catch{}
-document.getElementById('language').addEventListener('click',()=>{language=language==='zh'?'en':'zh';try{localStorage.setItem('jx-language',language)}catch{}const url=new URL(location.href);url.searchParams.set('lang',language);history.replaceState(null,'',url);render()});document.getElementById('theme').addEventListener('click',()=>{const dark=document.body.classList.toggle('dark');try{localStorage.setItem('jx-theme',dark?'dark':'light')}catch{}themeLabel()});render();
+'use strict';
+
+const readPreference = (key, fallback) => {
+  try { return localStorage.getItem(key) || fallback; } catch { return fallback; }
+};
+const savePreference = (key, value) => {
+  try { localStorage.setItem(key, value); } catch { /* Storage is optional. */ }
+};
+const queryLanguage = new URLSearchParams(location.search).get('lang');
+let language = ['zh', 'en'].includes(queryLanguage)
+  ? queryLanguage
+  : readPreference('jx-language', 'zh');
+if (!['zh', 'en'].includes(language)) language = 'zh';
+if (readPreference('jx-theme', 'light') === 'dark') document.body.classList.add('dark');
+
+const escapeHTML = value => String(value).replace(/[&<>"']/g, character => ({
+  '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+}[character]));
+const localized = values => values[language === 'en' ? 1 : 0];
+const label = (zh, en) => language === 'en' ? en : zh;
+
+function renderPaper(paper, openIds) {
+  const authors = escapeHTML(paper.authors).replace('Jiacheng Xu', '<strong class="author-self">Jiacheng Xu</strong>');
+  const figureAlt = `${paper.title} — ${label('方法与研究概览图', 'method and research overview')}`;
+  return `<details class="paper ${paper.image ? 'with-image' : 'no-image'} ${paper.accepted ? 'accepted' : 'submitted'}" id="paper-${paper.id}" ${openIds.has(`paper-${paper.id}`) ? 'open' : ''}>
+    <summary>
+      ${paper.image ? `<img class="paper-thumb" src="${paper.image}" alt="" width="134" height="96">` : ''}
+      <span class="paper-summary-text">
+        <span class="paper-meta"><span class="venue">${escapeHTML(paper.venue)}</span><span class="paper-status">${escapeHTML(localized(paper.status))}</span></span>
+        <span class="paper-title">${escapeHTML(paper.title)}</span>
+        <span class="paper-authors">${authors}</span>
+        <span class="paper-hint"><span class="hint-closed">${label('展开研究详情', 'Expand research details')}</span><span class="hint-open">${label('收起详情', 'Collapse details')}</span></span>
+      </span>
+    </summary>
+    <div class="paper-detail">
+      <h4>${label('研究内容', 'Research overview')}</h4>
+      <p>${escapeHTML(localized(paper.abstract))}</p>
+      ${paper.points.length ? `<ul>${paper.points.map(point => `<li>${escapeHTML(localized(point))}</li>`).join('')}</ul>` : ''}
+      ${paper.links.length ? `<div class="paper-links">${paper.links.map(([text, url]) => `<a href="${url}" target="_blank" rel="noopener noreferrer">${escapeHTML(text)} ↗</a>`).join('')}</div>` : ''}
+      ${paper.image ? `<figure class="paper-figure"><a href="${paper.image}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHTML(label('打开原图：', 'Open full-size figure: ') + paper.title)}"><img src="${paper.image}" alt="${escapeHTML(figureAlt)}" loading="lazy"></a><figcaption>${label('点击图片查看原图。', 'Click the figure to view it at full size.')}</figcaption></figure>` : ''}
+    </div>
+  </details>`;
+}
+
+function renderRecords(records) {
+  return records.map(([date, title, detail]) => `<article class="record"><time>${date}</time><div><h3>${escapeHTML(localized(title))}</h3><p>${escapeHTML(localized(detail))}</p></div></article>`).join('');
+}
+
+function updateThemeLabel() {
+  const dark = document.body.classList.contains('dark');
+  document.getElementById('theme').setAttribute('aria-pressed', String(dark));
+  document.getElementById('theme').setAttribute('aria-label', dark ? label('切换浅色模式', 'Switch to light mode') : label('切换深色模式', 'Switch to dark mode'));
+  document.querySelector('meta[name="theme-color"]').content = dark ? '#08090b' : '#fffae8';
+}
+
+function render() {
+  const openIds = new Set([...document.querySelectorAll('.paper[open]')].map(paper => paper.id));
+  document.documentElement.lang = language === 'en' ? 'en' : 'zh-CN';
+  document.title = label('徐嘉程 | Jiacheng Xu', 'Jiacheng Xu | Academic Homepage');
+  document.querySelector('meta[name="description"]').content = label(
+    '徐嘉程，山东大学计算机科学与技术本科生，2027 年入学清华大学硕士。研究方向：具身智能、世界模型、空中视觉语言导航和强化学习。',
+    'Jiacheng Xu, Computer Science undergraduate at Shandong University and incoming master’s student at Tsinghua University in 2027. Research in embodied AI, world models, aerial VLN, and reinforcement learning.'
+  );
+  document.querySelectorAll('[data-zh]').forEach(element => { element.innerHTML = element.dataset[language]; });
+  document.getElementById('language').innerHTML = `<span class="language-icon" aria-hidden="true">文</span><span>${label('English', '中文')}</span>`;
+  document.getElementById('language').setAttribute('aria-label', label('Switch to English', '切换为中文'));
+  document.getElementById('paper-list').innerHTML = profileData.papers.map(paper => renderPaper(paper, openIds)).join('');
+  document.getElementById('competition-list').innerHTML = renderRecords(profileData.competitions);
+  document.getElementById('honor-list').innerHTML = renderRecords(profileData.honors);
+  updateThemeLabel();
+}
+
+document.getElementById('language').addEventListener('click', () => {
+  language = language === 'zh' ? 'en' : 'zh';
+  savePreference('jx-language', language);
+  const url = new URL(location.href);
+  url.searchParams.set('lang', language);
+  history.replaceState(null, '', url);
+  render();
+});
+document.getElementById('theme').addEventListener('click', () => {
+  const dark = document.body.classList.toggle('dark');
+  savePreference('jx-theme', dark ? 'dark' : 'light');
+  updateThemeLabel();
+});
+document.getElementById('expand-all').addEventListener('click', () => {
+  document.querySelectorAll('.paper').forEach(paper => { paper.open = true; });
+});
+document.getElementById('collapse-all').addEventListener('click', () => {
+  document.querySelectorAll('.paper').forEach(paper => { paper.open = false; });
+});
+
+function revealLinkedPaper() {
+  if (!location.hash.startsWith('#paper-')) return;
+  const paper = document.getElementById(location.hash.slice(1));
+  if (paper instanceof HTMLDetailsElement) {
+    paper.open = true;
+    requestAnimationFrame(() => paper.scrollIntoView({ block: 'start' }));
+  }
+}
+window.addEventListener('hashchange', revealLinkedPaper);
+document.addEventListener('click', event => {
+  const link = event.target.closest('a[href^="#paper-"]');
+  if (link) {
+    const paper = document.getElementById(link.hash.slice(1));
+    if (paper instanceof HTMLDetailsElement) paper.open = true;
+  }
+});
+
+let scrollScheduled = false;
+function updateNavigation() {
+  const sections = [...document.querySelectorAll('main>.section')];
+  const active = sections.filter(section => section.getBoundingClientRect().top <= 160).at(-1) || sections[0];
+  document.querySelectorAll('.toc a').forEach(link => {
+    const selected = link.hash === `#${active.id}`;
+    link.classList.toggle('active', selected);
+    if (selected) link.setAttribute('aria-current', 'location');
+    else link.removeAttribute('aria-current');
+  });
+  scrollScheduled = false;
+}
+window.addEventListener('scroll', () => {
+  if (!scrollScheduled) {
+    scrollScheduled = true;
+    requestAnimationFrame(updateNavigation);
+  }
+}, { passive: true });
+render();
+revealLinkedPaper();
+updateNavigation();
