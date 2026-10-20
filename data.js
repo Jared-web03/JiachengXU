@@ -2,10 +2,10 @@
 const profileData = {
   "papers": [
     {
-      "venue": "NeurIPS 2026",
+      "venue": "NeurIPS · CCF-A",
       "status": [
-        "投稿中 · 共同一作",
-        "Submitted · Co-first author"
+        "已接收 · 共同一作",
+        "Accepted · Co-first author"
       ],
       "title": "WorldVLN: Autoregressive World Action Model for Aerial Vision-Language Navigation",
       "authors": "Baining Zhao*, Jiacheng Xu*, Weicheng Feng, Chen Gao, Xinlei Chen",
@@ -39,7 +39,7 @@ const profileData = {
           "My contribution: backbone and action-decoder design, autoregressive interaction, training/inference debugging, and contributions to the reinforcement-learning framework and optimization."
         ]
       ],
-      "accepted": false
+      "accepted": true
     },
     {
       "venue": "iScience · Q1",
@@ -78,24 +78,6 @@ const profileData = {
       "accepted": true
     },
     {
-      "venue": "NeurIPS 2026",
-      "status": [
-        "投稿中",
-        "Submitted"
-      ],
-      "title": "Beyond Denoising: Noise-Resilient Representation Alignment for Real-World Depth Perception",
-      "authors": "Xiujian Liang, Zheng Huang, Jiacheng Xu, Zehao Du, Mingyang Sun, Anda Cheng, Zhenxing Qian, Cewu Lu, Jianhua Sun",
-      "links": [],
-      "id": "depth",
-      "image": null,
-      "abstract": [
-        "研究关注真实环境中的深度感知，探索通过抗噪表示对齐提升对噪声的适应能力。论文题目中的核心方向是从单纯去噪转向更稳健的表示学习。",
-        "This work studies real-world depth perception through noise-resilient representation alignment, shifting the focus from denoising alone toward more robust representation learning."
-      ],
-      "points": [],
-      "accepted": false
-    },
-    {
       "venue": "AAAI 2027",
       "status": [
         "投稿中",
@@ -124,6 +106,42 @@ const profileData = {
           "Evaluation: average success-rate improvements of 7.8 and 19.1 percentage points on EmbodiedNav-Bench and UAV-ON, respectively; 13.4 points overall."
         ]
       ],
+      "accepted": false
+    },
+    {
+      "venue": "ICLR 2027",
+      "status": [
+        "投稿中",
+        "Submitted"
+      ],
+      "title": "DepState-JEPA: Depth-Grounded Predictive State Representations for Visual Perception and Embodied Manipulation",
+      "authors": "Xiujian Liang, Liuyuan Na, Zehao Du, Jiacheng Xu, Weixi Song, Mingyang Sun, Xingjun Ma, Cewu Lu, Jianhua Sun",
+      "links": [],
+      "id": "depstate-jepa",
+      "image": null,
+      "abstract": [
+        "DepState-JEPA 研究以深度信息为基础的预测状态表示，面向视觉感知与具身操作任务。",
+        "DepState-JEPA studies depth-grounded predictive state representations for visual perception and embodied manipulation."
+      ],
+      "points": [],
+      "accepted": false
+    },
+    {
+      "venue": "ICLR 2027",
+      "status": [
+        "投稿中",
+        "Submitted"
+      ],
+      "title": "World-as-Prompt: Rewriting Robot Observations for Robust Policy Execution",
+      "authors": "Jianjie Fang, Ziyou Wang, Yichun Zheng, Zhaolu Wang, Rongze Tang, Jiacheng Xu, Xvyuan Liu, Chen Gao, Wei Wu, Xinlei Chen, Yong Li",
+      "links": [],
+      "id": "world-as-prompt",
+      "image": null,
+      "abstract": [
+        "World-as-Prompt 研究通过重写机器人观测，支持更稳健的策略执行。",
+        "World-as-Prompt studies rewriting robot observations to support robust policy execution."
+      ],
+      "points": [],
       "accepted": false
     },
     {
@@ -183,6 +201,10 @@ const profileData = {
         [
           "DOI",
           "https://doi.org/10.1088/1674-4527/adfa73"
+        ],
+        [
+          "CSTR",
+          "https://www.cstr.org/32081.14.RAA.adfa73"
         ]
       ],
       "id": "lightcurve-moe",
