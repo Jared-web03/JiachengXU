@@ -2,6 +2,46 @@
 const profileData = {
   "papers": [
     {
+      "venue": "arXiv · 2026",
+      "status": [
+        "预印本 · 共同一作",
+        "Preprint · Co-first author"
+      ],
+      "title": "HandWorldBench: A Unified Benchmark for Hand-Centric World Models",
+      "authors": "Zhaolu Wang*, Jiacheng Xu*, Lihong Wang*, Shuqing Wang*, Jianjie Fang, Ziyou Wang, Xvyuan Liu, Rongze Tang, Yiding Ma, Xin Zhang, Jiawei Chen, Wei Wu, Chen Gao, Yong Li, Zhibo Chen",
+      "links": [
+        [
+          "Paper",
+          "https://arxiv.org/abs/2611.24731"
+        ],
+        [
+          "Project",
+          "https://embodiedcity.github.io/HandWorldBench/"
+        ]
+      ],
+      "id": "handworldbench",
+      "image": null,
+      "abstract": [
+        "HandWorldBench 是面向以手为中心的世界模型的统一评测基准，覆盖人手、仿真灵巧手与真实灵巧手。基准关注手部动作能否带来连贯且持续的物体状态变化，并通过统一协议评估不同具身形态下的模型表现。",
+        "HandWorldBench is a unified benchmark for hand-centric world models spanning human hands, simulated dexterous hands, and real dexterous hands. It evaluates whether hand actions produce coherent, persistent object-state changes and compares performance across embodiments under a shared protocol."
+      ],
+      "points": [
+        [
+          "数据与任务：从超过 600 小时视频中筛选出 20,500 段高质量交互片段，选取 500 个评测样例，覆盖 7 类任务族与 22 类任务。",
+          "Data and tasks: 20,500 curated interaction clips from over 600 hours of footage, with 500 evaluation cases covering seven task families and 22 task categories."
+        ],
+        [
+          "评测维度：以 17 项指标衡量视觉质量、手部保真度、外观一致性、指令遵循、物理一致性与时间连贯性。",
+          "Evaluation: 17 metrics assess visual quality, hand fidelity, appearance consistency, instruction following, physical consistency, and temporal coherence."
+        ],
+        [
+          "实验发现：对 11 个模型的评测表明，更强的手部姿态控制并不总能带来连贯的物体状态演化与稳健的跨具身表现。",
+          "Finding: evaluation of 11 models shows that stronger hand-pose control does not consistently yield coherent object-state evolution or robust cross-embodiment performance."
+        ]
+      ],
+      "accepted": false
+    },
+    {
       "venue": "NeurIPS · CCF-A",
       "status": [
         "已接收 · 共同一作",
