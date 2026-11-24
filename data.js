@@ -20,7 +20,7 @@ const profileData = {
         ]
       ],
       "id": "handworldbench",
-      "image": null,
+      "image": "assets/handworldbench.png",
       "abstract": [
         "HandWorldBench 是面向以手为中心的世界模型的统一评测基准，覆盖人手、仿真灵巧手与真实灵巧手。基准关注手部动作能否带来连贯且持续的物体状态变化，并通过统一协议评估不同具身形态下的模型表现。",
         "HandWorldBench is a unified benchmark for hand-centric world models spanning human hands, simulated dexterous hands, and real dexterous hands. It evaluates whether hand actions produce coherent, persistent object-state changes and compares performance across embodiments under a shared protocol."

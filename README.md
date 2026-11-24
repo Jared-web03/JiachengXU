@@ -9,7 +9,7 @@
 - `app.js`：语言与主题切换、论文折叠、全部展开/收起、论文锚点定位和目录高亮。
 - `style.css`：浅灰白背景、白色正文与浅灰蓝侧栏、侧栏与响应式布局；包含对应深色模式。
 - `assets/portrait.jpg`：原简历中的本人照片。
-- 五张方法图依次对应 `worldvln.png`、`spectra.png`、`sawman.png`、`kdd.png`、`lightcurve-moe.png`，原图保留，不裁切。未提供图片的论文不使用替代示意图。
+- 六张方法图对应 `handworldbench.png`、`worldvln.png`、`spectra.png`、`sawman.png`、`kdd.png`、`lightcurve-moe.png`，原图保留，不裁切。未提供图片的论文不使用替代示意图。
 
 论文默认收起，点击条目展开研究内容和完整原图；展开状态在语言切换时保留。点击研究经历中的论文链接也会自动展开相应论文。语言与主题偏好仅保存在访问者的浏览器中。
 
@@ -21,6 +21,6 @@ GitHub Pages 使用 `main` 分支根目录。中文直达链接为 `?lang=zh`，
 
 ## 资料依据与设计参考
 
-论文列表依据本人于 2026 年 10 月 20 日提供的新简历更新；HandWorldBench 于 2026 年 11 月 24 日根据 [arXiv](https://arxiv.org/abs/2611.24731) 和 [项目主页](https://embodiedcity.github.io/HandWorldBench/) 加入，根据本人确认标注为 CVPR 在投、共同第一作者。其他学术信息依据此前提供的简历，论文图与相关方法描述依据本人提供的五张图片。清华大学硕士专业为大模型科学与工程。硕士入学年份按 2026 年 9 月提供的“明年入学”信息写为 2027。未公开电话或原始简历文件；凭据不保存在项目中。
+论文列表依据本人于 2026 年 10 月 20 日提供的新简历更新；HandWorldBench 于 2026 年 11 月 24 日根据 [arXiv](https://arxiv.org/abs/2611.24731) 和 [项目主页](https://embodiedcity.github.io/HandWorldBench/) 加入，根据本人确认标注为 CVPR 在投、共同第一作者。其他学术信息依据此前提供的简历，论文图与相关方法描述依据本人提供的六张图片。清华大学硕士专业为大模型科学与工程。硕士入学年份按 2026 年 9 月提供的“明年入学”信息写为 2027。未公开电话或原始简历文件；凭据不保存在项目中。
 
 配色、资料侧栏、正文信息组织和折叠展示参考 [Jiacheng Liu's Homepage](https://tammytcl.github.io/Liu_Homepage/) 及其 [源代码](https://github.com/Tammytcl/Liu_Homepage)。本站独立实现页面与交互，不包含参考作者的个人资料、论文或图片。
