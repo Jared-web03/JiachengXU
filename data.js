@@ -2,10 +2,10 @@
 const profileData = {
   "papers": [
     {
-      "venue": "arXiv · 2026",
+      "venue": "CVPR",
       "status": [
-        "预印本 · 共同一作",
-        "Preprint · Co-first author"
+        "在投 · 共同一作",
+        "Submitted · Co-first author"
       ],
       "title": "HandWorldBench: A Unified Benchmark for Hand-Centric World Models",
       "authors": "Zhaolu Wang*, Jiacheng Xu*, Lihong Wang*, Shuqing Wang*, Jianjie Fang, Ziyou Wang, Xvyuan Liu, Rongze Tang, Yiding Ma, Xin Zhang, Jiawei Chen, Wei Wu, Chen Gao, Yong Li, Zhibo Chen",
